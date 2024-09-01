@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kldu0IEmi0w=",
+  "dgSpecHash": "u2bfkg8DaA0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\iMaster\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\iMaster\\.nuget\\packages\\syncfusion.ej2.aspnet.core\\26.2.14\\syncfusion.ej2.aspnet.core.26.2.14.nupkg.sha512",
+    "C:\\Users\\iMaster\\.nuget\\packages\\syncfusion.licensing\\26.2.14\\syncfusion.licensing.26.2.14.nupkg.sha512"
+  ],
   "logs": []
 }

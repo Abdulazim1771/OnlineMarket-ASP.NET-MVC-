@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj": {}
+    "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj": {}
   },
   "projects": {
-    "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj": {
+    "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
+        "projectUniqueName": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
         "projectName": "OnlineMarket(ASP.NET)",
-        "projectPath": "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
+        "projectPath": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\OnlineMarket(ASP.NET).csproj",
         "packagesPath": "C:\\Users\\iMaster\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iMaster\\Desktop\\Market\\OnlineMarket(ASP.NET)\\obj\\",
+        "outputPath": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\OnlineMarket(ASP.NET)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iMaster\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Syncfusion.EJ2.AspNet.Core": {
+              "target": "Package",
+              "version": "[26.2.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,14 +62,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
