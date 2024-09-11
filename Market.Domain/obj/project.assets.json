@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\Market.Domain\\Market.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\iMaster\\Desktop\\Market\\Market.Domain\\Market.Domain.csproj",
       "projectName": "Market.Domain",
-      "projectPath": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\Market.Domain\\Market.Domain.csproj",
+      "projectPath": "C:\\Users\\iMaster\\Desktop\\Market\\Market.Domain\\Market.Domain.csproj",
       "packagesPath": "C:\\Users\\iMaster\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iMaster\\Desktop\\SupMarket\\OnlineMarket-ASP.NET-MVC-\\Market.Domain\\obj\\",
+      "outputPath": "C:\\Users\\iMaster\\Desktop\\Market\\Market.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iMaster\\AppData\\Roaming\\NuGet\\NuGet.Config",

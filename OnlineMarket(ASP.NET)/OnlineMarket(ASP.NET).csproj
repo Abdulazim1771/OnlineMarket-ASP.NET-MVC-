@@ -7,12 +7,4 @@
     <RootNamespace>OnlineMarket_ASP.NET_</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="Views\Shared\_Layout.cshtml.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="26.2.14" />
-  </ItemGroup>
-
 </Project>
