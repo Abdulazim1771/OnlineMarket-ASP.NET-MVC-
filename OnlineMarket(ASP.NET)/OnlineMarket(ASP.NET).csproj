@@ -7,4 +7,8 @@
     <RootNamespace>OnlineMarket_ASP.NET_</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="26.2.14" />
+  </ItemGroup>
+
 </Project>

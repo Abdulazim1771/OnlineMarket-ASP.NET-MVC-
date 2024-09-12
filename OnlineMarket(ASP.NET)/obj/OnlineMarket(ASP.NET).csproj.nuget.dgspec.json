@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Syncfusion.EJ2.AspNet.Core": {
+              "target": "Package",
+              "version": "[26.2.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
