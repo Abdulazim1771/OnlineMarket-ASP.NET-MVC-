@@ -20,3 +20,41 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*Custom Style*/
+
+
+/*Hader*/
+
+.search-bar {
+    display: flex;
+    flex-grow:1;
+}
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        border: 0px solid #ddd;
+        border-right: none;
+    }
+
+        .search-bar input:focus {
+            border: 3px solid #ddd;
+            border-color: #e6952e;
+            outline: none;
+        }
+
+    .search-bar button {
+        padding: 0 20px;
+        border:0px solid #ddd;
+        background-color: #e6952e;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+        .search-bar button:hover {
+            background-color: #c28940;
+            border: #c28940
+        }
+
+/*Header*/
