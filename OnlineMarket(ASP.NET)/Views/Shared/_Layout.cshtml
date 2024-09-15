@@ -18,6 +18,10 @@
     var data = new string[] { "Badminton", "Basketball", "Cricket", "Football", "Golf", "Gymnastics", "Hockey", "Tennis" };
 }
 
+<style>
+    
+</style>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3" style="height:70px">
@@ -27,7 +31,8 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span> 
                 </button> *@
-                <div class="navbar-collapse d-flex align-items-center mt-2 mb-1 collapse d-sm-inline-flex justify-content-between gap-4">
+                <div class="navbar-collapse d-flex align-items-center 
+                               justify-content-center mt-2 mb-1 collapse d-sm-inline-flex justify-content-between gap-4">
                     <ul class="navbar-nav flex-grow-1 mt-2">
                         <li class="nav-item mt-2">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">
@@ -82,11 +87,39 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - OnlineMarket_ASP.NET_ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About us</h3>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Quality & Care</a></li>
+                    <li><a href="#">Join our community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Users</h3>
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Question - answer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section download-app">
+                <h3>Download the<br /> application</h3>
+                <a href="#"><img src="/Photos/App-Store-Emblem.png" alt="App Store"></a>
+                <br />
+                <a href="#"><img src="/Photos/Google_Play-Logo.wine.png" alt="Google Play"></a>
+            </div>
+            <div class="footer-section social-networks">
+                <h3 style="color:#BFA20F">SimSim<br /></h3> <h3>on social networks</h3>
+                <a href="#"><img src="/Photos/Instagram_logo_2016.svg.webp" alt="Instagram"></a>
+                <a style="margin-left:8px" href="https://www.youtube.com/"><img src="/Photos/Youtube_logo.png" alt="YouTube"></a>
+                <a style="margin-left:5px" href="#"><img src="/Photos/facebook-logo.webp" alt="Facebook"></a>
+                <a style="margin-left:5px" href="#"><img src="/Photos/twitter-logo.jpg" alt="X"></a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -97,16 +130,3 @@
 </body>
 </html>
 
-@*<button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                         style="background-color:aliceblue;" data-bs-toggle="dropdown" aria-expanded="false">All</button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Separated link</a></li>
-                        </ul>
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                        <button class="btn btn-outline-secondary search-bar-button" type="button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>*@
