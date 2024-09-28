@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace OnlineMarket.Infrastructure.Persistence.Configurations;
 
-namespace OnlineMarket.Infrastructure.Persistence.Configurations
+internal static class Constants
 {
-    internal class Constants
-    {
-    }
+    public const int DEFAULT_STRING_LENGTH = 255;
+    public const int MAX_STRING_LENGTH = 500;
 }

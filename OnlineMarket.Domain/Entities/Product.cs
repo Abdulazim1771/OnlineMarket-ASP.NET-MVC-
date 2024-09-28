@@ -16,12 +16,14 @@ public class Product : AuditableEntity
 
     public virtual ICollection<ImageFile> Images { get; set; }
 
-    //public ICollection<OrderDetail> OrderDetails { get; set; }
+    public ICollection<OrderDetail> OrderDetails { get; set; }
 
-    //public ICollection<Review> Reviews { get; set; }
+    public ICollection<Review> Reviews { get; set; }
 
     public Product()
     {
         Images = [];
+        OrderDetails = [];
+        Reviews = [];
     }
 }

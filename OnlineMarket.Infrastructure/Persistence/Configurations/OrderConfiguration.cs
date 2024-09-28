@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using OnlineMarket.Domain.Entities;
 
-namespace OnlineMarket.Infrastructure.Persistence.Configurations
+namespace OnlineMarket.Infrastructure.Persistence.Configurations;
+
+public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
-    internal class OrderConfiuration
+    public void Configure(EntityTypeBuilder<Order> builder)
     {
+        builder.ToTable(nameof(Order));
+        builder.HasKey(o => o.Id);
+
+        builder
+            .HasMany(o => o.OrderDetails)
+            .WithOne(or => or.Order)
+            .HasForeignKey(o => o.OrderId)
+            .OnDelete(DeleteBehavior.Cascade)
+            .IsRequired();
+
+        builder
+            .Property(o => o.TotalPrice)
+            .IsRequired();
     }
 }

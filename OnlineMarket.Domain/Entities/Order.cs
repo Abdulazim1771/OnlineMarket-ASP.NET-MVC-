@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Domain.Common;
 
-namespace OnlineMarket.Domain.Entities
+namespace OnlineMarket.Domain.Entities;
+
+public class Order : AuditableEntity
 {
-    internal class Order
+    //public int CustomerId { get; set; }
+    //public Customer Customer { get; set; }
+
+    public decimal TotalPrice { get; set; }
+
+    public ICollection<OrderDetail> OrderDetails { get; set; }
+
+    public Order()
     {
+        OrderDetails = [];
     }
 }

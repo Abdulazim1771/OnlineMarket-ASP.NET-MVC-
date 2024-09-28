@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Domain.Common;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OnlineMarket.Domain.Entities
+namespace OnlineMarket.Domain.Entities;
+
+public class Review : AuditableEntity
 {
-    internal class Review
-    {
-    }
+    public int ProductId { get; set; }
+    public required Product Product { get; set; }
+
+    //public int CustomerId { get; set; }
+    //public Customer Customer { get; set; }
+
+    public double Rating { get; set; }
+    public string? Comment { get; set; }
 }

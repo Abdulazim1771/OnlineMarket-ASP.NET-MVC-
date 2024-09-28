@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using OnlineMarket.Domain.Entities;
 
-namespace OnlineMarket.Infrastructure.Persistence.Configurations
+namespace OnlineMarket.Infrastructure.Persistence.Configurations;
+
+public class InventoryConfigurations : IEntityTypeConfiguration<Inventory>
 {
-    internal class InventoryConfigurations
+    public void Configure(EntityTypeBuilder<Inventory> builder)
     {
+        builder.ToTable(nameof(Inventory));
+        builder.HasKey(i => i.Id);
+
+        builder
+            .HasOne(i => i.Product)
+            .WithOne(i => i.Inventory)
+            .OnDelete(DeleteBehavior.NoAction)
+            .IsRequired();
+
+        builder
+            .Property(i => i.Quantity)
+            .IsRequired();         
     }
 }
