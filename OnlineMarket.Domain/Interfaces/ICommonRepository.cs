@@ -2,9 +2,11 @@
 
 public interface ICommonRepository
 {
-    IProductRepository ProductRepository { get; }
-    ICategoryRepository CategoryRepository { get; }
-    IInventoryRepository InventoryRepository { get; }
+    IProductRepository Products { get; }
+    ICategoryRepository Categories { get; }
+    IInventoryRepository Inventories { get; }
+    IImageFileRepository ImageFiles { get; }
+    IReviewRepository Reviews { get; }
 
     public int SaveChanges();
 }
