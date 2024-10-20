@@ -11,4 +11,9 @@
     <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="26.2.14" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineMarket.Application\OnlineMarket.Application.csproj" />
+    <ProjectReference Include="..\OnlineMarket.Infrastructure\OnlineMarket.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

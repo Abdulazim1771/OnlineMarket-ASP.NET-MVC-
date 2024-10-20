@@ -1,9 +1,11 @@
+using OnlineMarket_ASP.NET_.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXZfcnRXRmddU01xWkc=");
+builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();
 

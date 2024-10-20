@@ -7,11 +7,12 @@ namespace OnlineMarket.Infrastructure.Extensions;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection RegisterInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection RegisterInfrastructure(
+        this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<ICategoryRepository, CategoryRepository>();
 
-        return null;
+        return services;
     }
 }
 
