@@ -15,8 +15,7 @@ internal class ImageFileConfiguration : IEntityTypeConfiguration<ImageFile>
             .HasOne(i => i.Product)
             .WithMany(p => p.Images)
             .HasForeignKey(i => i.ProductId)
-            .OnDelete(DeleteBehavior.Cascade)
-            .IsRequired();
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder
             .Property(i => i.Name)

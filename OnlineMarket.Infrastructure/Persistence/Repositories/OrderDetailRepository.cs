@@ -3,19 +3,19 @@ using OnlineMarket.Domain.Interfaces;
 
 namespace OnlineMarket.Infrastructure.Persistence.Repositories;
 
-internal class ReviewRepository : RepositoryBase<Review>, IReviewRepository
+internal class OrderDetailRepository : RepositoryBase<OrderDetail>, IOrderDetailRepository
 {
-    public ReviewRepository(OnlineMarketDbContext context)
+    public OrderDetailRepository(OnlineMarketDbContext context)
         : base(context)
-    { 
+    {        
     }
 
-    public List<Review> GetAll()
+    public List<OrderDetail> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override List<Review> GetAll(string customerId)
+    public override List<OrderDetail> GetAll(string customerId)
     {
         throw new NotImplementedException();
     }

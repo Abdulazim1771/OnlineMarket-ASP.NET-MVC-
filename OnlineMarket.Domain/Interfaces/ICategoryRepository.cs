@@ -4,5 +4,5 @@ namespace OnlineMarket.Domain.Interfaces;
 
 public interface ICategoryRepository : IRepositoryBase<Category>
 {
-    List<Category> GetAll(string? search, Guid userId);
+    List<Category> GetAll(string? search, string customerId);
 }

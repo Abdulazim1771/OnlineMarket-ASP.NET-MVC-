@@ -19,7 +19,7 @@ public static class DependencyInjection
 
     private static void AddProviders(IConfiguration configuration)
     {
-        var syncfusionKey = configuration.GetValue<string>("")
+        var syncfusionKey = configuration.GetValue<string>("SyncfusionKey")
             ?? throw new InvalidOperationException("Syncfusion key is not found.");
 
         SyncfusionLicenseProvider.RegisterLicense(syncfusionKey);

@@ -13,9 +13,9 @@ public class InventoryConfigurations : IEntityTypeConfiguration<Inventory>
 
         builder
             .HasOne(i => i.Product)
-            .WithOne(i => i.Inventory)
-            .OnDelete(DeleteBehavior.NoAction)
-            .IsRequired();
+            .WithOne(p => p.Inventory)
+            .HasForeignKey<Inventory>(i => i.ProductId)
+            .OnDelete(DeleteBehavior.Cascade); 
 
         builder
             .Property(i => i.Quantity)

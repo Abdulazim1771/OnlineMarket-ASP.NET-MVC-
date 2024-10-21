@@ -14,7 +14,7 @@ internal abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where
         _context = context;
     }
 
-    public abstract List<TEntity> GetAll(Guid userId);
+    public abstract List<TEntity> GetAll(string customerId);
 
     public virtual TEntity GetById(int id)
     {

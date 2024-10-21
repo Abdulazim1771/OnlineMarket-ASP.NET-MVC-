@@ -15,7 +15,7 @@ internal class InventoryRepository : RepositoryBase<Inventory>, IInventoryReposi
         throw new NotImplementedException();
     }
 
-    public override List<Inventory> GetAll(Guid userId)
+    public override List<Inventory> GetAll(string customerId)
     {
         throw new NotImplementedException();
     }

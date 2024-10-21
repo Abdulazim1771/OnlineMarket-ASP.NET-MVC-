@@ -20,6 +20,7 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
 
         builder
             .Property(o => o.TotalPrice)
+            .HasPrecision(18, 2)
             .IsRequired();
     }
 }

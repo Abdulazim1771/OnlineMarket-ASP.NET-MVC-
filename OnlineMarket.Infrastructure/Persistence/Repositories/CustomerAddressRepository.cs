@@ -3,19 +3,19 @@ using OnlineMarket.Domain.Interfaces;
 
 namespace OnlineMarket.Infrastructure.Persistence.Repositories;
 
-internal class ImageFileRepository : RepositoryBase<ImageFile>, IImageFileRepository
+internal class CustomerAddressRepository : RepositoryBase<CustomerAddress>, ICustomerAddressRepository
 {
-    public ImageFileRepository(OnlineMarketDbContext context)
+    public CustomerAddressRepository(OnlineMarketDbContext context)
         : base(context)
     {        
     }
 
-    public override List<ImageFile> GetAll(string customerId)
+    public List<CustomerAddress> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public List<ImageFile> GetByProductId(int productId)
+    public override List<CustomerAddress> GetAll(string customerId)
     {
         throw new NotImplementedException();
     }

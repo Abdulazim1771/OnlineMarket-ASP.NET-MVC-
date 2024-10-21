@@ -6,10 +6,11 @@ using System.Reflection;
 
 namespace OnlineMarket.Infrastructure.Persistence;
 
-public class OnlineMarketDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
+public class OnlineMarketDbContext : IdentityDbContext<Customer, CustomerRole, string>
 {
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<CustomerAddress> CustomerAddresses { get; set; }
     public virtual DbSet<Inventory> Inventories { get; set; }
     public virtual DbSet<ImageFile> ImageFiles { get; set; }
     public virtual DbSet<Review> Reviews { get; set; }
@@ -34,39 +35,39 @@ public class OnlineMarketDbContext : IdentityDbContext<IdentityUser<Guid>, Ident
 
         #region Identity
 
-        modelBuilder.Entity<IdentityUser<Guid>>(e =>
+        modelBuilder.Entity<IdentityUser>(b =>
         {
-            e.ToTable("User");
+            b.ToTable("Customer");
         });
 
-        modelBuilder.Entity<IdentityUserClaim<Guid>>(e =>
+        modelBuilder.Entity<IdentityUserClaim<string>>(b =>
         {
-            e.ToTable("UserClaim");
+            b.ToTable("UserClaim");
         });
 
-        modelBuilder.Entity<IdentityUserLogin<Guid>>(e =>
+        modelBuilder.Entity<IdentityUserLogin<string>>(b =>
         {
-            e.ToTable("UserLogin");
+            b.ToTable("UserLogin");
         });
 
-        modelBuilder.Entity<IdentityUserToken<Guid>>(e =>
+        modelBuilder.Entity<IdentityUserToken<string>>(b =>
         {
-            e.ToTable("UserToken");
+            b.ToTable("UserToken");
         });
 
-        modelBuilder.Entity<IdentityRole<Guid>>(e =>
+        modelBuilder.Entity<IdentityRole>(b =>
         {
-            e.ToTable("Role");
+            b.ToTable("CustomerRole");
         });
 
-        modelBuilder.Entity<IdentityRoleClaim<Guid>>(e =>
+        modelBuilder.Entity<IdentityRoleClaim<string>>(b =>
         {
-            e.ToTable("RoleClaim");
+            b.ToTable("RoleClaim");
         });
 
-        modelBuilder.Entity<IdentityUserRole<Guid>>(e =>
+        modelBuilder.Entity<IdentityUserRole<string>>(b =>
         {
-            e.ToTable("UserRole");
+            b.ToTable("UserRole");
         });
 
         #endregion

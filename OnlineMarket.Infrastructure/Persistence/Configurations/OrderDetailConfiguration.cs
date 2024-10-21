@@ -12,19 +12,20 @@ public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
         builder.HasKey(od => od.Id);
 
         builder
-            .HasOne(or => or.Order)
+            .HasOne(od => od.Order)
             .WithMany(o => o.OrderDetails)
             .HasForeignKey(od => od.OrderId)
-            .IsRequired();
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder
-            .HasOne(or => or.Product)
+            .HasOne(od => od.Product)
             .WithMany(p => p.OrderDetails)
             .HasForeignKey(od => od.ProductId)
-            .IsRequired();
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder
-            .Property(or => or.Quantity)
+            .Property(od => od.UnitPrice)
+            .HasPrecision(18, 2)
             .IsRequired();
     }
 }

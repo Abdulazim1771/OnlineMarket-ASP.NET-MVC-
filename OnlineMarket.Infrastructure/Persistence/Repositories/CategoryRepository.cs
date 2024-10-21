@@ -11,7 +11,7 @@ internal class CategoryRepository : RepositoryBase<Category>, ICategoryRepositor
     {      
     }
 
-    public List<Category> GetAll(string? search, Guid userId)
+    public List<Category> GetAll(string? search, string customerId)
     {
         var query = _context.Categories
             .AsNoTracking();
@@ -26,7 +26,7 @@ internal class CategoryRepository : RepositoryBase<Category>, ICategoryRepositor
         return entities;
     }
 
-    public override List<Category> GetAll(Guid userId)
+    public override List<Category> GetAll(string customerId)
     {
         var categories = _context.Categories
             .AsNoTracking()

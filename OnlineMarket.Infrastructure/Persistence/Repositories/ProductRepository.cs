@@ -10,13 +10,14 @@ internal class ProductRepository : RepositoryBase<Product>, IProductRepository
     {       
     }
 
-    public List<Product> GetAll(string? search)
+    public List<Product> GetAll()
     {
         throw new NotImplementedException();
     }
 
-    public override List<Product> GetAll(Guid userId)
+    public override List<Product> GetAll(string customerId)
     {
         throw new NotImplementedException();
     }
+
 }

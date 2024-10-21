@@ -12,24 +12,16 @@ public class ProductConfigurations : IEntityTypeConfiguration<Product>
         builder.HasKey(p => p.Id);
 
         builder
-            .HasMany(p => p.Images)
-            .WithOne(p => p.Product)
-            .HasForeignKey(p => p.ProductId)
-            .OnDelete(DeleteBehavior.Cascade)
-            .IsRequired();
-
-        builder
-            .HasMany(p => p.OrderDetails)
-            .WithOne(p => p.Product)
-            .HasForeignKey(p => p.ProductId)
+            .HasOne(p => p.Category)
+            .WithMany(c => c.Products)
+            .HasForeignKey(p => p.CategoryId)
             .OnDelete(DeleteBehavior.Cascade)
             .IsRequired();
 
         builder
             .HasOne(p => p.Inventory)
-            .WithOne(p => p.Product)
+            .WithOne(i => i.Product)
             .HasForeignKey<Inventory>(i => i.ProductId)
-            .OnDelete(DeleteBehavior.Cascade)
             .IsRequired();
 
         builder
@@ -38,18 +30,24 @@ public class ProductConfigurations : IEntityTypeConfiguration<Product>
             .IsRequired();
 
         builder
-            .Property(p => p.Description)
-            .HasMaxLength(Constants.MAX_STRING_LENGTH)
-            .IsRequired(false);
-
-        builder
             .Property(p => p.SKU)
-            .HasMaxLength(8)
+            .HasMaxLength(Constants.DEFAULT_STRING_LENGTH)
             .IsRequired();
 
         builder
             .Property(p => p.Price)
+            .HasPrecision(18, 2)
             .IsRequired();
 
+        builder
+            .HasMany(p => p.Images)
+            .WithOne(i => i.Product)
+            .HasForeignKey(i => i.ProductId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+            .Property(p => p.Description)
+            .HasMaxLength(Constants.MAX_STRING_LENGTH)
+            .IsRequired(false);
     }
 }
