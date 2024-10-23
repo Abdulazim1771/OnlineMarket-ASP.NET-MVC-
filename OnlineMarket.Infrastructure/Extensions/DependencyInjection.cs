@@ -30,7 +30,13 @@ public static class DependencyInjection
 
         services.AddIdentity<Customer, CustomerRole>(options =>
         {
-            
+            options.SignIn.RequireConfirmedAccount = false;
+            options.SignIn.RequireConfirmedPhoneNumber = false;
+
+            options.Password.RequireDigit = true;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequiredLength = 7;      
         })
         .AddEntityFrameworkStores<OnlineMarketDbContext>()
         .AddDefaultTokenProviders();
