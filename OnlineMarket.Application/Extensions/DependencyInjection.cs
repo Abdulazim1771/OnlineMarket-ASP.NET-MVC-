@@ -11,6 +11,8 @@ public static class DependencyInjection
         this IServiceCollection services, IConfiguration configuration)
     {
         services.AddScoped<ICategoryStore, CategoryStore>();
+        services.AddScoped<IProductStore, ProductStore>();
+        services.AddScoped<IOrderStore, OrderStore>();
 
         return services;
     }

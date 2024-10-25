@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Domain.Entities;
 
-namespace OnlineMarket.Application.Requests.Product
-{
-    internal class CreateProductRequest
-    {
-    }
-}
+namespace OnlineMarket.Application.Requests.Product;
+
+public record CreateProductRequest(
+    string Name,
+    string? Description,
+    string SKU,
+    decimal Price,
+    int CategoryId,
+    int Quantity,
+    int ProductId);

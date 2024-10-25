@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Domain.Entities;
 
-namespace OnlineMarket.Application.Mappings
+namespace OnlineMarket.Application.Mappings;
+
+public static class ReviewViewModel
 {
-    internal class ReviewViewModel
-    {
-    }
+    
 }

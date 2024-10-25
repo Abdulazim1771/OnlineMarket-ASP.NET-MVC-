@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Application.Stores.Interfaces;
 
-namespace OnlineMarket.Application.Stores
+namespace OnlineMarket.Application.Stores;
+
+public class OrderStore : IOrderStore
 {
-    internal class OrderStore
-    {
-    }
 }

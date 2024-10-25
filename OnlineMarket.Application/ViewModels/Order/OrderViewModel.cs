@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OnlineMarket.Application.ViewModels.Customer;
+using OnlineMarket.Domain.Entities;
 
-namespace OnlineMarket.Application.ViewModels.Order
+namespace OnlineMarket.Application.ViewModels.Order;
+
+public class OrderViewModel
 {
-    internal class OrderViewModel
+    public int Id { get; init; }
+    public decimal TotalPrice { get; init; }
+
+    public required CustomerViewModel Customer { get; init; }
+    public List<OrderDetail> OrderDetails { get; init; }
+    public OrderViewModel()
     {
+        OrderDetails = [];
     }
 }

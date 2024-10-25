@@ -10,12 +10,7 @@ internal class CustomerAddressRepository : RepositoryBase<CustomerAddress>, ICus
     {        
     }
 
-    public List<CustomerAddress> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<CustomerAddress> GetAll(string customerId)
+    public override List<CustomerAddress> GetAll()
     {
         throw new NotImplementedException();
     }

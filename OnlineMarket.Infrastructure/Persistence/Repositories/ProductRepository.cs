@@ -10,12 +10,7 @@ internal class ProductRepository : RepositoryBase<Product>, IProductRepository
     {       
     }
 
-    public List<Product> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<Product> GetAll(string customerId)
+    public override List<Product> GetAll()
     {
         throw new NotImplementedException();
     }

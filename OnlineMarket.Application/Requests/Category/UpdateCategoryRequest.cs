@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace OnlineMarket.Application.Requests.Category;
 
-namespace OnlineMarket.Application.Requests.Category
-{
-    internal class UpdateCategoryRequest
-    {
-    }
-}
+public sealed record UpdateCategoryRequest(
+    int Id, string Name, string? Description)
+    : CreateCategoryRequest(Name: Name, Description: Description);

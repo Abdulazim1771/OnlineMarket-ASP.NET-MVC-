@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using OnlineMarket.Domain.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using OnlineMarket.Domain.Common;
 
 namespace OnlineMarket.Domain.Entities;
 
@@ -14,4 +12,5 @@ public class Review : AuditableEntity
 
     public double Rating { get; set; }
     public string? Comment { get; set; }
+    public DateTime? DeletedAt { get; set; }
 }

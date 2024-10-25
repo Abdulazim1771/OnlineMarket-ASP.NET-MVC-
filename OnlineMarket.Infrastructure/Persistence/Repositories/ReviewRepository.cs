@@ -10,12 +10,7 @@ internal class ReviewRepository : RepositoryBase<Review>, IReviewRepository
     { 
     }
 
-    public List<Review> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<Review> GetAll(string customerId)
+    public override List<Review> GetAll()
     {
         throw new NotImplementedException();
     }

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<OnlineMarket.Application.ViewModels.Category.CategoryViewModel>
+
+<div class="row mt-4">
+    <div class="col-md-7">
+        <ejs-grid id="categories" dataSource="@Model" allowSorting="true" allowPaging="true">
+            <e-grid-pagesettings pageSize="8"></e-grid-pagesettings>
+            <e-grid-columns>
+                <e-grid-column headerText="Id" field="" width="50px" template="#navigationColumnTemplate"></e-grid-column>
+                <e-grid-column headerText="Category" field="Name" width="150px"></e-grid-column>
+                <e-grid-column headerText="Type" template="#typeColumnTemplate" width="150px"></e-grid-column>
+                <e-grid-column headerText="Actions" template="#actionColumnTemplate" width="100px"></e-grid-column>
+            </e-grid-columns>
+        </ejs-grid>
+    </div>
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-shapes fa-2xl"></i>
+        </div>
+    </div>
+</div>
+
+

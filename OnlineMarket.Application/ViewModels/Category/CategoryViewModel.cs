@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace OnlineMarket.Application.ViewModels.Category;
 
-namespace OnlineMarket.Application.ViewModels.Category
+public class CategoryViewModel
 {
-    internal class CategoryViewModel
-    {
-    }
+    public int Id { get; init; }
+    public required string Name { get; init; }
+    public string? Description { get; init; }
+    public DateTime CreatedAt { get; init; }
+    public DateTime? UpdatedAt { get; init; }
 }

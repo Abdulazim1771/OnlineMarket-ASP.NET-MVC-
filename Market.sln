@@ -5,11 +5,11 @@ VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineMarket(ASP.NET)", "OnlineMarket(ASP.NET)\OnlineMarket(ASP.NET).csproj", "{1EEC638C-A21B-4AA5-8E03-B67F20ACA3F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineMarket.Infrastructure", "OnlineMarket.Infrastructure\OnlineMarket.Infrastructure.csproj", "{4FB09248-F6D7-480C-B7C9-38D9086757E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineMarket.Infrastructure", "OnlineMarket.Infrastructure\OnlineMarket.Infrastructure.csproj", "{4FB09248-F6D7-480C-B7C9-38D9086757E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineMarket.Domain", "OnlineMarket.Domain\OnlineMarket.Domain.csproj", "{C3BA9C44-7CBD-4272-8A2F-B3106D6541D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineMarket.Domain", "OnlineMarket.Domain\OnlineMarket.Domain.csproj", "{C3BA9C44-7CBD-4272-8A2F-B3106D6541D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineMarket.Application", "OnlineMarket.Application\OnlineMarket.Application.csproj", "{80317824-3762-4C8F-B38B-C89F49AA99A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineMarket.Application", "OnlineMarket.Application\OnlineMarket.Application.csproj", "{80317824-3762-4C8F-B38B-C89F49AA99A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

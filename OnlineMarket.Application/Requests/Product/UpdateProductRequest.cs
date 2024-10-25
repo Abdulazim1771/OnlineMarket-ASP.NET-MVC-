@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace OnlineMarket.Application.Requests.Product;
 
-namespace OnlineMarket.Application.Requests.Product
-{
-    internal class UpdateProductRequest
-    {
-    }
-}
+public sealed record UpdateProductRequest(
+    string Name,
+    string? Description,
+    string SKU,
+    decimal Price,
+    int CategoryId,
+    int Quantity,
+    int ProductId) : CreateProductRequest(
+    Name: Name,
+    Description: Description,
+    SKU: SKU,
+    Price: Price,
+    CategoryId: CategoryId,
+    Quantity: Quantity,
+    ProductId: ProductId);

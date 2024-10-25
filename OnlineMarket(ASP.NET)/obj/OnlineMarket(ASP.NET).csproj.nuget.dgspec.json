@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Syncfusion.EJ2.AspNet.Core": {
               "target": "Package",
               "version": "[27.1.53, )"

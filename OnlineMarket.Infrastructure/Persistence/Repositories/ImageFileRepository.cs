@@ -10,7 +10,7 @@ internal class ImageFileRepository : RepositoryBase<ImageFile>, IImageFileReposi
     {        
     }
 
-    public override List<ImageFile> GetAll(string customerId)
+    public override List<ImageFile> GetAll()
     {
         throw new NotImplementedException();
     }

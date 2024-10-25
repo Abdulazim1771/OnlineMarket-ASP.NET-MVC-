@@ -10,12 +10,7 @@ internal class OrderDetailRepository : RepositoryBase<OrderDetail>, IOrderDetail
     {        
     }
 
-    public List<OrderDetail> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<OrderDetail> GetAll(string customerId)
+    public override List<OrderDetail> GetAll()
     {
         throw new NotImplementedException();
     }

@@ -10,12 +10,7 @@ internal class InventoryRepository : RepositoryBase<Inventory>, IInventoryReposi
     {
     }
 
-    public List<Inventory> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<Inventory> GetAll(string customerId)
+    public override List<Inventory> GetAll()
     {
         throw new NotImplementedException();
     }

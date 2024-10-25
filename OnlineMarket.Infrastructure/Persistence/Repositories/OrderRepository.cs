@@ -11,12 +11,7 @@ internal class OrderRepository : RepositoryBase<Order>, IOrderRepository
         
     }
 
-    public List<Order> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override List<Order> GetAll(string customerId)
+    public override List<Order> GetAll()
     {
         throw new NotImplementedException();
     }
