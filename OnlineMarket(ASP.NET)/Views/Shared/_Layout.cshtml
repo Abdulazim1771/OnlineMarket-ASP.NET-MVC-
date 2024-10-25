@@ -14,9 +14,7 @@
     <script src="https://cdn.syncfusion.com/ej2/26.2.14/dist/ej2.min.js"></script>
 </head>
 
-@{
-    var data = new string[] { "Badminton", "Basketball", "Cricket", "Football", "Golf", "Gymnastics", "Hockey", "Tennis" };
-}
+@model IEnumerable<OnlineMarket.Application.ViewModels.Category.CategoryViewModel>
 
 <body>
     <header>
@@ -45,7 +43,8 @@
                         </li>
                     </ul>
                     <div class="search-bar m-lg-0 m-md-0" style="width:62%; height:40px">
-                        <ejs-dropdownlist id="games" width="80px" dataSource="data" popupWidth="300px" placeholder="All" popupHeight="220px">
+                        <ejs-dropdownlist id="Categories" width="80px" dataSource="@ViewBag.Categories" popupWidth="300px" placeholder="All" popupHeight="220px">
+                                <e-dropdownlist-fields text="Name" value="Id"></e-dropdownlist-fields>
                         </ejs-dropdownlist>
                         <form class="search-bar">
                             <input type="text" name="searchText" asp-controller="Products" asp-action="Index" value="@ViewBag.SearchText" placeholder="Search here...">
