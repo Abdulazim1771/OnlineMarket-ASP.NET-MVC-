@@ -10,7 +10,7 @@ public static class DependencyInjection
         this IServiceCollection services, IConfiguration configuration)
     {
         services.RegisterInfrastructure(configuration);
-        services.RegisterApplication(configuration);
+        services.RegisterApplication(configuration);      
 
         AddProviders(configuration);
 
