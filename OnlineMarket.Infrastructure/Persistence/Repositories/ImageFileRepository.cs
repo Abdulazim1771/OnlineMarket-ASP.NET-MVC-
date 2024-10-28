@@ -1,4 +1,5 @@
-﻿using OnlineMarket.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using OnlineMarket.Domain.Entities;
 using OnlineMarket.Domain.Interfaces;
 
 namespace OnlineMarket.Infrastructure.Persistence.Repositories;
@@ -12,11 +13,20 @@ internal class ImageFileRepository : RepositoryBase<ImageFile>, IImageFileReposi
 
     public override List<ImageFile> GetAll()
     {
-        throw new NotImplementedException();
+        var images = _context.ImageFiles
+            .AsNoTracking()  
+            .ToList();
+
+        return images;
     }
 
     public List<ImageFile> GetByProductId(int productId)
     {
-        throw new NotImplementedException();
+        var images = _context.ImageFiles
+            .AsNoTracking()
+            .Where(x => x.ProductId == productId)
+            .ToList();
+
+        return images;
     }
 }

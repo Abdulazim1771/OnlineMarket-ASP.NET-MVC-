@@ -8,5 +8,4 @@ public interface IRepositoryBase<TEntity> where TEntity : EntityBase
     TEntity GetById(int id);
     TEntity Create(TEntity entity);
     void Update(TEntity entity);
-    void Delete(int id);
 }

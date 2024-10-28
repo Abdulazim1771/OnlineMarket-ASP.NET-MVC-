@@ -1,41 +1,98 @@
-﻿@{
+﻿@model IEnumerable<OnlineMarket.Application.ViewModels.Product.ProductViewModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-@* <div class="row">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="~/Photos/Youtube_logo.png" class="d-block w-100% h-50" alt="...">
+<div class="main-container">
+    <div class="products-section">
+        @if (Model is null || !Model.Any())
+        {
+            <p> No products are available at the moment. Please check back later!</p>
+        }
+        else
+        {
+            <div class="product-grid">
+                @foreach (var product in Model!)
+                {
+                    <div class="product-card">
+                        <div class="product-image">
+                            @if (product.Images != null && product.Images.Any())
+                            {
+                                <img src="data:image/jpeg;base64,@product.Images.First()" alt="Product Image" style="max-width: 200px; margin: 10px" />
+                            }
+                            else
+                            {
+                                <img src="~/images/default-product.jpg" alt="Default Image" style="max-width: 200px; margin: 10px" />
+                            }
+                        </div>
+                        <div class="product-details">
+                            <h3>@product.Name</h3>
+                            <p>@product.Description</p>
+                            <p><strong>Price:</strong> $@product.Price</p>
+                            <p><strong>Rating:</strong> @product.ProductRating ⭐</p>
+                            <p><strong>Category:</strong> @product.CategoryName</p>
+                            <a href="@Url.Action("Details", "Product", new { id = product.Id })" class="btn btn-primary">View Product</a>
+                        </div>
+                    </div>
+                }
             </div>
-            <div class="carousel-item">
-                <img src="~/Photos/Youtube_logo.png" class="d-block w-100% h-50" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="~/Photos/Youtube_logo.png" class="d-block w-100% h-50" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        }    
     </div>
-    <div>
-        <button type="button" name="Popular"></button>
-    </div>
-</div> *@
+</div>
 
-<div class="container">
-<div class="banner-section">
-    <img src="~/Photos/App-Store-Emblem.png" alt="Banner" class="banner-image" />
-    <div class="banner-text">
-        <h1>Title</h1>
-        <p>Subtitle</p>
-        <a href="..." class="btn btn-primary">ButtonText</a>
-    </div>
-</div>
-</div>
+<style>
+    .main-container {
+        padding: 20px;
+    }
+
+    .products-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+        .product-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+    .product-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-details {
+        padding: 15px;
+        text-align: center;
+    }
+
+        .product-details h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+</style>

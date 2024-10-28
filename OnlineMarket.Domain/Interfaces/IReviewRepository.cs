@@ -4,5 +4,5 @@ namespace OnlineMarket.Domain.Interfaces;
 
 public interface IReviewRepository : IRepositoryBase<Review>
 { 
-    List<Review> GetAll();
+    List<Review> GetAll(int productId);
 }

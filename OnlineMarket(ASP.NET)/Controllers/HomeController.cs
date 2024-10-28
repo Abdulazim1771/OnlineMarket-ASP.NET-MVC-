@@ -1,6 +1,9 @@
+using MailKit.Search;
 using Microsoft.AspNetCore.Mvc;
 using OnlineMarket.Application.Requests.Category;
+using OnlineMarket.Application.Requests.Product;
 using OnlineMarket.Application.Stores.Interfaces;
+using OnlineMarket.Domain.Entities;
 using OnlineMarket_ASP.NET_.Models;
 using System.Diagnostics;
 
@@ -10,19 +13,30 @@ namespace OnlineMarket_ASP.NET_.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ICategoryStore _categoryStore;
+        private readonly IProductStore _productStore;
 
-        public HomeController(ILogger<HomeController> logger, ICategoryStore categoryStore)
+        public HomeController(ILogger<HomeController> logger, 
+            ICategoryStore categoryStore, IProductStore productStore)
         {
             _categoryStore = categoryStore;
             _logger = logger;
+            _productStore = productStore;   
         }
 
-        public IActionResult Index([FromQuery] GetCategoriesRequest getCategoryRequest)
+        public IActionResult Index()
         {
-            var categories = _categoryStore.GetAll(getCategoryRequest);
+            var categories = _categoryStore.GetAll(new GetCategoriesRequest(null));
             ViewBag.Categories = categories;
 
-            return View();
+            //var products = _productStore.GetAll(request);
+
+            return View(null);
+        }
+        public IActionResult FilterByCategory(int? categoryId)
+        {
+            var products = new List<Product>();
+
+            return View("Index", products);
         }
 
         public IActionResult Privacy()
