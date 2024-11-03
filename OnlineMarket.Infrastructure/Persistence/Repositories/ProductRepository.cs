@@ -6,9 +6,12 @@ namespace OnlineMarket.Infrastructure.Persistence.Repositories;
 
 internal class ProductRepository : RepositoryBase<Product>, IProductRepository
 {
+    private List<Product> Products;
+
     public ProductRepository(OnlineMarketDbContext context)
         : base(context)
-    {       
+    {
+        Products = [];
     }
 
     public override List<Product> GetAll()
