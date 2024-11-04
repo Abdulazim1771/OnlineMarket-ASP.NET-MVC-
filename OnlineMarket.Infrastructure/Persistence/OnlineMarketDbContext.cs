@@ -33,43 +33,43 @@ public class OnlineMarketDbContext : IdentityDbContext<Customer, CustomerRole, s
 
         base.OnModelCreating(modelBuilder);
 
-        #region Identity
+        //#region Identity
 
-        modelBuilder.Entity<IdentityUser>(b =>
-        {
-            b.ToTable("Customer");
-        });
+        //modelBuilder.Entity<IdentityUser<Guid>>(b =>
+        //{
+        //    b.ToTable("Customer");
+        //});
 
-        modelBuilder.Entity<IdentityUserClaim<string>>(b =>
-        {
-            b.ToTable("UserClaim");
-        });
+        //modelBuilder.Entity<IdentityUserClaim<Guid>>(b =>
+        //{
+        //    b.ToTable("UserClaim");
+        //});
 
-        modelBuilder.Entity<IdentityUserLogin<string>>(b =>
-        {
-            b.ToTable("UserLogin");
-        });
+        //modelBuilder.Entity<IdentityUserLogin<Guid>>(b =>
+        //{
+        //    b.ToTable("UserLogin");
+        //});
 
-        modelBuilder.Entity<IdentityUserToken<string>>(b =>
-        {
-            b.ToTable("UserToken");
-        });
+        //modelBuilder.Entity<IdentityUserToken<Guid>>(b =>
+        //{
+        //    b.ToTable("UserToken");
+        //});
 
-        modelBuilder.Entity<IdentityRole>(b =>
-        {
-            b.ToTable("CustomerRole");
-        });
+        //modelBuilder.Entity<IdentityRole<Guid>>(b =>
+        //{
+        //    b.ToTable("CustomerRole");
+        //});
 
-        modelBuilder.Entity<IdentityRoleClaim<string>>(b =>
-        {
-            b.ToTable("RoleClaim");
-        });
+        //modelBuilder.Entity<IdentityRoleClaim<Guid>>(b =>
+        //{
+        //    b.ToTable("RoleClaim");
+        //});
 
-        modelBuilder.Entity<IdentityUserRole<string>>(b =>
-        {
-            b.ToTable("UserRole");
-        });
+        //modelBuilder.Entity<IdentityUserRole<Guid>>(b =>
+        //{
+        //    b.ToTable("UserRole");
+        //});
 
-        #endregion
+        //#endregion
     }
 }

@@ -28,11 +28,27 @@ public class ProductsController : Controller
 
     public IActionResult Index([FromQuery] GetProductsRequest request)
     {
-        
+        return View();
+    }
+
+    public IActionResult Create()
+    {
+        PopulateViewBag();
+
+        var model = new CreateProductRequest(
+            Name: "",
+            Description: null,
+            SKU: "",
+            Price: default,
+            CategoryId: default,
+            Quantity: default,
+            ProductId: default);
 
         return View();
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
     public IActionResult Create([FromForm] CreateProductRequest request, [FromForm] List<IFormFile> attachments)
     {
         if(!ModelState.IsValid)
